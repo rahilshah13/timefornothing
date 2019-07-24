@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+
+{% block image %}
+<header class="masthead" style="background-image: url('static/img/coverpic.png')"> 
+{% endblock image %}
+
+{% block headers %}
+<h1>time for nothing</h1>
+<span class="subheading">a weekly webcomic</span>
+{% endblock headers %}
+
+
+{% block content %}
+  <!-- Main Content -->
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+
+        {% for post in posts[::-1] %}
+        <div class="post-preview">
+          <a href="{{ url_for('read_post', post_id=post.id) }}">
+            <h2 class="post-title">
+              {{ post.title }}
+            </h2>
+            <h3 class="post-subtitle">
+              {{ post.content }}
+            </h3>
+          </a>
+          <p class="post-meta">Posted by {{ post.author.username }}
+            on {{ post.date_posted.strftime('%Y-%m-%d') }}</p>
+        </div>
+        <hr>
+        {% endfor %}
+
+        <!-- Pager -->
+<!--         <div class="clearfix">
+          <a class="btn btn-primary float-right" href="#">Older Posts &rarr;</a>
+        </div> -->
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  {% endblock content %}

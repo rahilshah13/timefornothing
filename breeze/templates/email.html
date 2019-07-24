@@ -1,0 +1,51 @@
+{% extends "layout.html" %}
+
+{% block image %}
+<header class="masthead" style="background-image: url('static/img/coverpic.png')"> 
+{% endblock image %}
+
+{% block headers %}
+<h1>Sign Up for the Email List!</h1>
+<span class="subheading">Never Miss a New Chapter</span>
+{% endblock headers %}
+
+
+
+{% block content %}
+    
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+
+    <div class="content-section">
+        <form method="POST" action="">
+            {{ form.hidden_tag() }}
+            <fieldset class="form-group mt-100">
+                <legend class="border-bottom mb-4">Sign Up</legend>
+
+                <div class="form-group">
+                    {{ form.email.label(class="form-control-label") }}
+                    {% if form.email.errors %}
+                        {{ form.email(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.email.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.email(class="form-control form-control-lg") }}
+                    {% endif %}
+                </div>
+
+            </fieldset>
+
+            <div class="form-group">
+                {{ form.submit(class="btn btn-outline-info") }}
+            </div>
+
+        </form>
+    </div>
+</div>
+</div>
+</div>
+{% endblock content %}
