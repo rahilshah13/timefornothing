@@ -1,1 +1,2 @@
-"# zee" 
+"timefornothing.tk
+timefornothing.tk/admin" 
