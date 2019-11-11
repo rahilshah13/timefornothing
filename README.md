@@ -1,2 +1,2 @@
-"timefornothing.tk
-timefornothing.tk/admin" 
+"domain: timefornothing.tk \n
+admin panel access: timefornothing.tk/admin" 
