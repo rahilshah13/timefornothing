@@ -48,7 +48,7 @@ PySocks==1.6.8
 python-dateutil==1.5
 pytz==2018.9
 PyYAML==5.1.1
-reportlab==3.5.23
+reportlab==3.5.55
 requests==2.21.0
 ruamel-yaml==0.15.46
 six==1.12.0
